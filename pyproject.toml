@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "datawagon-transform"
+version = "0.1.0"
+description = ""
+authors = ["JM <jtmcn.dev@gmail.com>"]
+readme = "README.md"
+packages = [{include = "datawagon_transform"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+dbt-postgres = "^1.5.2"
+sqlfmt = "^0.0.3"
+shandy-sqlfmt = {extras = ["jinjafmt"], version = "^0.19.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

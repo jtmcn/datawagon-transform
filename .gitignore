@@ -1,0 +1,8 @@
+notes.txt
+todo.txt
+
+target/
+dbt_packages/
+logs/
+
+.env

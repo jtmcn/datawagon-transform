@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw_csv
+    database: caravan
+    schema: src_csv
+    loader: datawagon
+    loaded_at_field: _file_load_date
+    tables:
+      - name: asset_raw
+        description: ""
+      - name: adj_asset_raw
+        description: ""
+      - name: claim_raw
+        description: ""        
+      - name: adj_claim_raw
+        description: ""
+      - name: video_raw
+        description: ""        
+      - name: adj_video_raw
+        description: ""
+      - name: monthly_shorts_non_music_ads_video_summary
+        description: ""
+      - name: monthly_shorts_non_music_subscription_video_summary
+        description: ""
+      - name: red_music_rawdata_asset
+        description: ""
+      - name: red_music_rawdata_video
+        description: ""
+      - name: red_rawdata_asset
+        description: ""
+      - name: red_rawdata_video
+        description: ""
