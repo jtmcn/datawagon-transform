@@ -13,7 +13,7 @@ renamed as (
         content_type,
         policy,
         total_views,
-        net_partner_revenue__post_revshare,
+        coalesce(net_partner_revenue__post_revshare, 0.0) as partner_revenue,
         _file_name as file_name,
         _content_owner as content_owner,
         _report_date_key as report_date_key,

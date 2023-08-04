@@ -6,7 +6,7 @@ with stg__longs__claim__ad_rev as (
         {{ ref('stg__longs__claim__ad_rev') }}
 
 ),
-stg__longs_ads__channel_revenue as (
+stg__longs__claim__ad_rev__daily_channel_revenue as (
 
     select
         report_date_key,
@@ -25,4 +25,4 @@ stg__longs_ads__channel_revenue as (
 select
     *
 from
-    stg__longs_ads__channel_revenue
+    stg__longs__claim__ad_rev__daily_channel_revenue
