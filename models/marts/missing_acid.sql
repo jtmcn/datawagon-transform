@@ -4,7 +4,7 @@ with longs__asset__ad_missing_asset_id as (
         report_date_key,
         date_key,
         asset_id,
-        video_id,
+        {# video_id, #}
         channel_id
     from
         {{ ref('stg__longs__asset__ad_rev') }}
@@ -14,7 +14,7 @@ with longs__asset__ad_missing_asset_id as (
         report_date_key,
         date_key,
         asset_id,
-        video_id,
+        {# video_id, #}
         channel_id
 
 ),
@@ -25,7 +25,7 @@ missing_asset_id__channel_name as (
         ads.report_date_key,
         ads.date_key,
         ads.asset_id,
-        ads.video_id,
+        {# ads.video_id, #}
         ads.channel_id,
         cid.channel_display_name
     from longs__asset__ad_missing_asset_id as ads
