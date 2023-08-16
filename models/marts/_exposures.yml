@@ -1,0 +1,14 @@
+version: 2
+
+exposures:
+
+  - name: monthly_channel_revenue_reporting
+    label: Monthly Channel Revenue 
+    type: analysis                         # required: {dashboard, notebook, analysis, ml, application}
+    description: Monthly Channel Revenue
+
+    depends_on:                             # expected
+      - ref('monthly_channel_revenue')
+
+    owner:
+      name: Content Partner

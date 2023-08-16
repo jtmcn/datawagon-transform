@@ -21,17 +21,15 @@ models:
   datawagon:
     +materialized: ephemeral  
 
-    source:
+    staging:
       +materialized: ephemeral
       schema: staging
       enabled: true
 
-    staging:
+    intermediate:
       +materialized: view
       schema: staging
       enabled: true
-      keep:
-        enabled: false
 
     marts:
       +materialized: table

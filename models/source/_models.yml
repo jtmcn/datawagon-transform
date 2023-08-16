@@ -1,9 +1,0 @@
-version: 2
-
-models:
-  - name: src__raw_csv__claim_raw
-  - name: stg__channels
-    config:
-      materialized: table
-      # sort: report_date_key # not sure this works
-  

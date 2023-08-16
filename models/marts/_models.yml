@@ -1,6 +1,6 @@
 version: 2
 
 models:
-  - name: daily_channel_revenue
+  - name: monthly_channel_revenue
     config:
       materialized: table

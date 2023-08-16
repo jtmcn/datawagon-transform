@@ -1,0 +1,93 @@
+version: 2
+
+sources:
+  - name: raw_csv
+    database: caravan
+    schema: src_csv
+    loader: datawagon
+    loaded_at_field: "_file_load_date:timestamp"
+    tables:
+      - name: asset_raw
+        description: "Daily ad revenue by country and asset"
+        config:
+          enabled: true
+        tests:
+          - unique:
+              column_name: "day || '-' || asset_id || '-' || country || '-' || _content_owner"
+      - name: adj_asset_raw
+        description: "Daily ad revenue by country and asset, adjustments made for prior months"
+        config:
+          enabled: true
+        tests:
+          - unique:
+              column_name: "day || '-' || asset_id || '-' || country || '-' || _content_owner"        
+      - name: claim_raw
+        description: "Daily ad revenue by country and claim"
+        config:
+          enabled: true       
+        tests:
+          - unique:
+              column_name: "day || '-' || asset_id || '-' || video_id || '-' || country || '-' || content_type || '-' || policy || '-' || _content_owner"
+      - name: adj_claim_raw
+        description: "Daily ad revenue by country and claim, adjustments made for prior months"
+        config:
+          enabled: true        
+        tests:
+          - unique:
+              column_name: "day || '-' || asset_id || '-' || video_id || '-' || country || '-' || content_type || '-' || policy || '-' || _content_owner"        
+      - name: video_raw
+        description: "Daily ad revenue by country and video"
+        config:
+          enabled: true     
+        tests:
+          - unique:
+              column_name: "day || '-' || video_id || '-' || country || '-' || content_type || '-' || policy || '-' || _content_owner"                
+      - name: adj_video_raw
+        description: "Daily ad revenue by country and video, adjustments made for prior months"
+        config:
+          enabled: true       
+        tests:
+          - unique:
+              column_name: "day || '-' || video_id || '-' || country || '-' || content_type || '-' || policy || '-' || _content_owner"                
+      - name: monthly_shorts_non_music_ads_video_summary
+        description: "Daily ad revenue by country and non-music short videos"
+        config:
+          enabled: true       
+        tests:
+          - unique:
+              column_name: "video_id || '-' || content_type || '-' || policy || '-' || _report_date_key"          
+      - name: monthly_shorts_non_music_subscription_video_summary
+        description: "Daily subscription revenue by country and non-music short videos"
+        config:
+          enabled: true       
+        tests:
+          - unique:
+              column_name: "day || '-' || video_id || '-' || country || '-' || content_type || '-' || _content_owner"          
+      - name: red_music_rawdata_asset
+        description: "Daily subscription revenue by country and music asset"
+        config:
+          enabled: true
+        tests:
+          - unique:
+              column_name: "day || '-' || asset_id || '-' || country || '-' || _content_owner"        
+      - name: red_music_rawdata_video
+        description: "Daily subscription revenue by country and music video"
+        config:
+          enabled: true
+        tests:
+          - unique:
+              column_name: "day || '-' || video_id || '-' || asset_id || '-' || country || '-' || content_type || '-' || policy || '-' || _content_owner"         
+      - name: red_rawdata_asset
+        description: "Daily subscription revenue by country and non-music asset"
+        config:
+          enabled: true
+        tests:
+          - unique:
+              column_name: "day || '-' || asset_id || '-' || country || '-' || _content_owner"         
+      - name: red_rawdata_video
+        description: "Daily subscription revenue by country and non-music video"
+        config:
+          enabled: true
+        tests:
+          - unique:
+              column_name: "day || '-' || video_id || '-' || asset_id || '-' || claim_type || '-' || country || '-' || content_type || '-' || policy || '-' || _content_owner"        

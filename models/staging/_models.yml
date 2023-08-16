@@ -1,0 +1,316 @@
+version: 2
+
+models:
+  - name: stg__longs__asset__ad_rev
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country_code
+      - name: asset_id
+      - name: asset_title
+      - name: asset_labels
+      - name: asset_channel_id
+      - name: asset_type
+      - name: custom_id
+      - name: owned_views
+      - name: youtube_revenue_split__auction
+      - name: youtube_revenue_split__reserved
+      - name: youtube_revenue_split__partner_sold_youtube_served
+      - name: youtube_revenue_split__partner_sold_partner_served
+      - name: youtube_revenue_split
+      - name: partner_revenue__auction
+      - name: partner_revenue__reserved
+      - name: partner_revenue__partner_sold_youtube_served
+      - name: partner_revenue__partner_sold_partner_served
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__longs__asset__ad_rev_adj
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country
+      - name: asset_id
+      - name: asset_title
+      - name: asset_labels
+      - name: asset_channel_id
+      - name: asset_type
+      - name: custom_id
+      - name: owned_views
+      - name: youtube_revenue_split__auction
+      - name: youtube_revenue_split__reserved
+      - name: youtube_revenue_split__partner_sold_youtube_served
+      - name: youtube_revenue_split__partner_sold_partner_served
+      - name: youtube_revenue_split
+      - name: partner_revenue__auction
+      - name: partner_revenue__reserved
+      - name: partner_revenue__partner_sold_youtube_served
+      - name: partner_revenue__partner_sold_partner_served
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__longs__asset__sub_rev
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country
+      - name: asset_id
+      - name: asset_labels
+      - name: asset_channel_id
+      - name: custom_id
+      - name: asset_title
+      - name: owned_watchtime
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__longs__claim__ad_rev
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country
+      - name: video_id
+      - name: channel_id
+      - name: asset_id
+      - name: asset_channel_id
+      - name: asset_type
+      - name: custom_id
+      - name: content_type
+      - name: policy
+      - name: claim_type
+      - name: claim_origin
+      - name: owned_views
+      - name: youtube_revenue_split__auction
+      - name: youtube_revenue_split__reserved
+      - name: youtube_revenue_split__partner_sold_youtube_served
+      - name: youtube_revenue_split__partner_sold_partner_served
+      - name: youtube_revenue_split
+      - name: partner_revenue__auction
+      - name: partner_revenue__reserved
+      - name: partner_revenue__partner_sold_youtube_served
+      - name: partner_revenue__partner_sold_partner_served
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__longs__claim__ad_rev_adj
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country
+      - name: video_id
+      - name: channel_id
+      - name: asset_id
+      - name: asset_channel_id
+      - name: asset_type
+      - name: custom_id
+      - name: content_type
+      - name: policy
+      - name: claim_type
+      - name: claim_origin
+      - name: owned_views
+      - name: youtube_revenue_split__auction
+      - name: youtube_revenue_split__reserved
+      - name: youtube_revenue_split__partner_sold_youtube_served
+      - name: youtube_revenue_split__partner_sold_partner_served
+      - name: youtube_revenue_split
+      - name: partner_revenue__auction
+      - name: partner_revenue__reserved
+      - name: partner_revenue__partner_sold_youtube_served
+      - name: partner_revenue__partner_sold_partner_served
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__longs__music_asset__sub_rev
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country
+      - name: asset_id
+      - name: asset_labels
+      - name: asset_channel_id
+      - name: custom_id
+      - name: asset_title
+      - name: owned_views
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__longs__music_video__sub_rev
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country
+      - name: video_id
+      - name: custom_id
+      - name: content_type
+      - name: video_title
+      - name: video_duration__sec
+      - name: username
+      - name: uploader
+      - name: channel_display_name
+      - name: channel_id
+      - name: claim_type
+      - name: claim_origin
+      - name: multiple_claims
+      - name: asset_id
+      - name: policy
+      - name: owned_views
+      - name: youtube_revenue_split
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__longs__video__ad_rev
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country
+      - name: video_id
+      - name: video_title
+      - name: video_duration__sec
+      - name: category
+      - name: channel_id
+      - name: uploader
+      - name: channel_display_name
+      - name: content_type
+      - name: policy
+      - name: owned_views
+      - name: youtube_revenue_split__auction
+      - name: youtube_revenue_split__reserved
+      - name: youtube_revenue_split__partner_sold_youtube_served
+      - name: youtube_revenue_split__partner_sold_partner_served
+      - name: youtube_revenue_split
+      - name: partner_revenue__auction
+      - name: partner_revenue__reserved
+      - name: partner_revenue__partner_sold_youtube_served
+      - name: partner_revenue__partner_sold_partner_served
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__longs__video__ad_rev_adj
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country
+      - name: video_id
+      - name: video_title
+      - name: video_duration__sec
+      - name: category
+      - name: channel_id
+      - name: uploader
+      - name: channel_display_name
+      - name: content_type
+      - name: policy
+      - name: owned_views
+      - name: youtube_revenue_split__auction
+      - name: youtube_revenue_split__reserved
+      - name: youtube_revenue_split__partner_sold_youtube_served
+      - name: youtube_revenue_split__partner_sold_partner_served
+      - name: youtube_revenue_split
+      - name: partner_revenue__auction
+      - name: partner_revenue__reserved
+      - name: partner_revenue__partner_sold_youtube_served
+      - name: partner_revenue__partner_sold_partner_served
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__longs__video__sub_rev
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country
+      - name: video_id
+      - name: custom_id
+      - name: content_type
+      - name: video_title
+      - name: video_duration__sec
+      - name: username
+      - name: uploader
+      - name: channel_display_name
+      - name: channel_id
+      - name: claim_type
+      - name: claim_origin
+      - name: multiple_claims
+      - name: asset_id
+      - name: policy
+      - name: owned_watchtime
+      - name: youtube_revenue_split
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__shorts__video__ad_rev
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: video_id
+      - name: video_title
+      - name: video_duration__sec
+      - name: category
+      - name: channel_id
+      - name: uploader
+      - name: content_type
+      - name: policy
+      - name: total_views
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date
+
+  - name: stg__shorts__video__sub_rev
+    description: ""
+    columns:
+      - name: adjustment_type
+      - name: date_key
+      - name: country
+      - name: video_id
+      - name: custom_id
+      - name: content_type
+      - name: video_title
+      - name: video_duration__sec
+      - name: username
+      - name: uploader
+      - name: channel_id
+      - name: owned_subscription_views
+      - name: partner_revenue
+      - name: file_name
+      - name: content_owner
+      - name: report_date_key
+      - name: file_load_date

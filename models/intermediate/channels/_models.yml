@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: int__channel_id_on_date
+    description: ""
+    columns:
+      - name: report_date_key
+      - name: date_key
+      - name: channel_id
+      - name: channel_display_name
+      - name: surrogate_key
+        tests:
+          - unique
+          - not_null
+          
+  - name: int__asset_channel
+    description: ""
+    columns:
+      - name: asset_channel_id
+        tests:
+          - unique
+          - not_null        
+      - name: asset_channel_display_name
+
+             

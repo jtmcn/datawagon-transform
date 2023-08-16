@@ -1,3 +1,17 @@
 {
-    "dbt.queryLimit": 500
+    "dbt.queryLimit": 500,
+    "sqlfluff.dialect": "postgres",
+    "sqlfluff.config": ".sqlfluff",
+    "sqlfluff.executablePath": ".venv/bin/sqlfluff",
+    "sqlfluff.env.useDotEnvFile": true,
+    "sqlfluff.linter.run": "onSave",
+    "sqlfluff.experimental.format.executeInTerminal": true,
+    "sqlfluff.format.languages": [
+        "sql",
+        "sql-bigquery",
+        "jinja-sql",
+        "postgres",
+        "snowflake-sql"
+    ],
+    "editor.formatOnSave": false
 }
